@@ -1,0 +1,274 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Ranade', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3B1C32;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #3B1C32;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #E8D8C4;
+  font-weight: bold;
+}
+
+nav a.active,
+nav a:hover {
+  border-bottom: 2px solid #C7B7A3;
+}
+
+#darkToggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+
+.section {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  background: #1A1A1D;
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #6A1E55;
+}
+
+.contact-btn {
+  background-color: #6A1E55;
+  color: #1A1A1D;
+  border: none;
+  padding: 1rem 2.25rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.home-social-icon {
+  color: white;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.home-social-icon:hover {
+  color: #6A1E55;
+}
+
+.home-img {
+  position: absolute;
+  right: 23rem;
+  bottom: 30rem;
+  width: 295px;
+  z-index: 0;
+}
+
+
+.home-img img {
+  max-width: 125%;
+  border-radius: 50%;
+  display: block;
+  height: auto;
+  background: #3B1C32 ;
+  box-shadow: 0 0 20px #6A1E55;
+  /* filter: drop-shadow(0 0 20px #6A1E55); */
+
+}
+
+/* About Section with Background Image + Tint */
+.about-section {
+  display: flex;
+  padding: 4rem 2rem;
+  position: relative;
+  background-image: url('https://i.postimg.cc/qRSBKGrh/photo-bg.jpg'); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #E8D8C4;
+  z-index: 0;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 27, 27, 0.85); /* Color tint overlay */
+  z-index: 1;
+}
+
+.about-heading,
+.about-content,
+.about {
+  position: relative;
+  z-index: 2;
+}
+
+.about-heading {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content {
+  flex: 2;
+  min-width: 300px;
+}
+
+.about {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.about h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #C7B7A3;
+  text-shadow: #1A1A1D 5px 5px 5px;
+  margin-left: 5rem;
+}
+
+.about p {
+  margin-bottom: 1rem;
+}
+
+/* Project Section Styles */
+.projects {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: space-between; /* Spread out the items */
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #1A1A1D;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 30%; /* Allow cards to take up 30% of the available width */
+  text-align: center;
+  box-shadow: 0 4px 8px #1A1A1D;
+  transition: transform 0.3s ease; /* For smooth hover effect */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #C7B7A3;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #E8D8C4;
+  margin-bottom: 1rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 300px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+
+  .home-img {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 10px;
+    width: 250px;
+  }
+
+  .home-social {
+    justify-content: center;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about h2 {
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .project-card {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 2rem; /* Add some space between cards */
+  }
+}
