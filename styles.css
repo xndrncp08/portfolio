@@ -195,15 +195,32 @@ nav a:hover {
   gap: 2rem;
 }
 
+.projects-heading h1 {
+  font-size: 3rem;     /* make it bigger */
+  font-weight: 700;    /* bold */
+  text-align: center;  /* center it */
+  margin-bottom: 2rem; /* add spacing below */
+  color: #C7B7A3;      /* optional: match your theme */
+}
+
+.projects-content {
+  display: flex;
+  flex-wrap: wrap;     /* wrap to new line on small screens */
+  gap: 20px;           /* space between cards */
+  justify-content: center; /* center the cards horizontally */
+  margin-top: 2rem;
+}
+
 .project-card {
   background-color: #1A1A1D;
   border-radius: 10px;
   padding: 2rem;
-  width: 30%; /* Allow cards to take up 30% of the available width */
+  width: 30%; /* takes up 30% of row */
   text-align: center;
   box-shadow: 0 4px 8px #1A1A1D;
-  transition: transform 0.3s ease; /* For smooth hover effect */
+  transition: transform 0.3s ease;
 }
+
 
 .project-card:hover {
   transform: translateY(-10px); /* Slight lift on hover */
