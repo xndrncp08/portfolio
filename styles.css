@@ -116,16 +116,13 @@ nav a:hover {
   z-index: 0;
 }
 
-
 .home-img img {
   max-width: 125%;
   border-radius: 50%;
   display: block;
   height: auto;
-  background: #3B1C32 ;
+  background: #3B1C32;
   box-shadow: 0 0 20px #6A1E55;
-  /* filter: drop-shadow(0 0 20px #6A1E55); */
-
 }
 
 /* About Section with Background Image + Tint */
@@ -221,7 +218,6 @@ nav a:hover {
   transition: transform 0.3s ease;
 }
 
-
 .project-card:hover {
   transform: translateY(-10px); /* Slight lift on hover */
 }
@@ -245,106 +241,140 @@ nav a:hover {
 }
 
 /* Contact Section */
-    .contact-section {
-      background: #1A1A1D;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    
-    .contact-heading h2 {
-      font-size: 3.5rem;
-      color: #C7B7A3;
-      margin-bottom: 2rem;
-    }
-    
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    
-    .form-group label {
-      display: block;
-      text-align: left;
-      margin-bottom: 0.5rem;
-      color: #E8D8C4;
-    }
-    
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border-radius: 5px;
-      border: 1px solid #3B1C32;
-      background-color: rgba(255, 255, 255, 0.1);
-      color: white;
-    }
-    
-    .form-group textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-    
-    .submit-btn {
-      background-color: #6A1E55;
-      color: white;
-      border: none;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    
-    .submit-btn:hover {
-      background-color: #8a2a6e;
-    }
+.contact-section {
+  background: #1A1A1D;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact-heading h2 {
+  font-size: 3.5rem;
+  color: #C7B7A3;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #E8D8C4;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #3B1C32;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #6A1E55;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #8a2a6e;
+}
 
 /* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .project-card {
+    width: 45%; /* two cards per row on tablets */
+  }
+}
+
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
-    padding-bottom: 300px;
+    padding: 2rem 1rem 14rem; /* avoid overlap with image */
   }
 
-  .hero-content {
-    max-width: 100%;
-    padding: 1rem 0;
+  .hero-content h1 {
+    font-size: 2.8rem;
   }
 
   .home-img {
     position: absolute;
     right: 50%;
     transform: translateX(50%);
-    bottom: 10px;
-    width: 250px;
+    bottom: 1rem;
+    width: 200px;
   }
 
   .home-social {
     justify-content: center;
   }
 
-  header {
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
   .about-section {
     flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
   }
 
   .about h2 {
-    margin-left: 0;
-    text-align: center;
-    margin-bottom: 2rem;
+    margin: 0 0 1.5rem;
+    font-size: 2.5rem;
   }
 
   .project-card {
-    width: 100%; /* Full width on smaller screens */
-    margin-bottom: 2rem; /* Add some space between cards */
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .contact-btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .projects-heading h1,
+  .contact-heading h2 {
+    font-size: 2rem;
   }
 }
